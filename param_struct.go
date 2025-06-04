@@ -1,5 +1,7 @@
 package apisdk
 
+import "github.com/shopspring/decimal"
+
 type ParamGetApprovals struct {
 	Page   int    `json:"page"`
 	Limit  int    `json:"limit"`
@@ -89,8 +91,8 @@ type TVMParams struct {
 }
 
 type TokenInfo struct {
-	Address string `json:"address"`
-	Decimal string `json:"decimal"`
+	Address string          `json:"address"`
+	Decimal decimal.Decimal `json:"decimal"`
 }
 
 type ParamNewApproval struct {
