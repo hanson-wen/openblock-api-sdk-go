@@ -72,6 +72,25 @@ type TXInfo struct {
 	Utxo                 []*Utxo   `json:"utxo,omitempty"`
 	UseMaxAmount         bool      `json:"useMaxAmount,omitempty"`
 	TotalGas             string    `json:"totalGas,omitempty"`
+	RecentBlockHash      string    `json:"recent_blockhash"`
+	ActiveTokenEnum      int       `json:"activeTokenEnum"`
+	TvmParams            TVMParams `json:"tvmParams"`
+	FeeLimit             string    `json:"feeLimit"`
+	Token                TokenInfo `json:"token"`
+}
+
+type TVMParams struct {
+	TxTrieRoot     string `json:"txTrieRoot"`
+	WitnessAddress string `json:"witnessAddress"`
+	ParentHash     string `json:"parentHash"`
+	Version        string `json:"version"`
+	Timestamp      string `json:"timestamp"`
+	Number         string `json:"number"`
+}
+
+type TokenInfo struct {
+	Address string `json:"address"`
+	Decimal string `json:"decimal"`
 }
 
 type ParamNewApproval struct {
